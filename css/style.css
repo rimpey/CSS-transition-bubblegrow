@@ -1,0 +1,67 @@
+/* 
+    Initial state of bubble so it's hidden
+    This class is used to set the initial state of both jQuery and CSS3 bubbles
+*/
+
+.bubble {
+    position: absolute;
+    top: 250px;
+    height: 0px;
+    width: 0px;
+    z-index: 1;
+    background-color: white;
+    text-align: center;
+    line-height: 0px;
+    border-radius: 0px;
+    border: 0px solid green;
+    box-sizing: border-box;
+    font-size: 0px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    opacity: 0;
+    transition: height 0.5s ease, width 0.5s ease, line-height 0.5s ease, border-radius 0.5s ease, border-width 0.5s ease, font-size 0.5s ease, opacity 0.5s ease, right 0.5s ease, top 0.5s ease;
+}
+
+#bubble2 {
+    right: 250px;
+}
+#bubble3 {
+    left: 250px;
+}
+
+/* 
+    These two classes are used for the CSS3 method (bubblepop and bubblepop2)
+    The #bubble2 prefix is just so the right: attribute beats the one in the #bubble2 style 
+    further down as ID beats class on it's own
+*/
+/* !important used otherwise #bubble1 #bubble2 etc needs to be used with .bubblepop for specificity to beat the right
+    .bubble.bubblepop doesn't beat #bubble1.bubblepop
+*/
+
+/* style=""    #id     .class     <tag> */
+/*              1                       */
+/*              1         1             WIN */ 
+/*#bubble2.bubblepop {*/
+
+.bubblepop {
+    top: 190px;
+    right: 190px !important;
+    height: 120px;
+    width: 120px;
+    line-height:110px;
+    border-width: 5px;
+    font-size:22px;
+    border-radius: 60px;
+    opacity: 1;
+}
+
+.bubblepop2 {
+    top: 200px;
+    right: 200px !important;
+    height: 100px;
+    width: 100px;
+    line-height:90px;
+    border-width: 5px;
+    font-size:20px;
+    border-radius: 50px;
+}
